@@ -26,7 +26,7 @@ export default function Footer() {
 						<ul className="space-y-2">
 							<li>
 								<Link
-									to="services"
+									to="business"
 									smooth={true}
 									duration={500}
 									className="text-gray-600 hover:text-yellow-500 transition-colors hover:cursor-pointer"

@@ -1,10 +1,10 @@
 "use client";
 
+import Business from "@/components/Business";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
 import Works from "@/components/Works";
 import type { FC } from "react";
 
@@ -16,8 +16,8 @@ const Main: FC = () => {
 				<div className="snap-start" id="top">
 					<Hero />
 				</div>
-				<div className="snap-start" id="services">
-					<Services />
+				<div className="snap-start" id="business">
+					<Business />
 				</div>
 				<div className="snap-start" id="works">
 					<Works />
