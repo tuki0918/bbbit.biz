@@ -40,7 +40,7 @@ export default function Header() {
 							duration={500}
 							className="text-xl font-bold text-yellow-500 hover:cursor-pointer"
 						>
-							Company
+							bbbit
 						</Link>
 
 						{/* Desktop Menu */}

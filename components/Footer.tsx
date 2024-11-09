@@ -9,20 +9,16 @@ export default function Footer() {
 			<div className="container mx-auto px-4">
 				<div className="grid md:grid-cols-4 gap-8 mb-8">
 					<div className="col-span-2">
-						<h3 className="text-xl font-bold text-yellow-500 mb-4">Company</h3>
+						<h3 className="text-xl font-bold text-yellow-500 mb-4">bbbit</h3>
 						<p className="text-gray-600 mb-4">
 							未来を見据えた価値創造のパートナーとして、
 							お客様のビジネスの成長をサポートいたします。
 						</p>
-						<p className="text-gray-600">
-							〒100-0001
-							<br />
-							東京都千代田区1-1-1
-						</p>
+						<p className="text-gray-600">contact@bbbit.biz</p>
 					</div>
 
 					<div>
-						<h4 className="font-semibold text-gray-900 mb-4">リンク</h4>
+						<h4 className="font-semibold text-gray-900 mb-4">MENU</h4>
 						<ul className="space-y-2">
 							<li>
 								<Link
@@ -58,7 +54,7 @@ export default function Footer() {
 					</div>
 
 					<div>
-						<h4 className="font-semibold text-gray-900 mb-4">法的情報</h4>
+						<h4 className="font-semibold text-gray-900 mb-4">LINKS</h4>
 						<ul className="space-y-2">
 							<li>
 								<a
@@ -82,7 +78,7 @@ export default function Footer() {
 
 				<div className="border-t border-gray-200 pt-8">
 					<p className="text-center text-gray-600 text-sm">
-						© {new Date().getFullYear()} Company. All rights reserved.
+						© {new Date().getFullYear()} bbbit. All rights reserved.
 					</p>
 				</div>
 			</div>
