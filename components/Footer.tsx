@@ -40,16 +40,6 @@ export default function Footer() {
 									実績
 								</Link>
 							</li>
-							<li>
-								<Link
-									to="contact"
-									smooth={true}
-									duration={500}
-									className="text-gray-600 hover:text-yellow-500 transition-colors hover:cursor-pointer"
-								>
-									お問い合わせ
-								</Link>
-							</li>
 						</ul>
 					</div>
 
@@ -70,6 +60,14 @@ export default function Footer() {
 									className="text-gray-600 hover:text-yellow-500 transition-colors hover:cursor-pointer"
 								>
 									特定商取引法について
+								</a>
+							</li>
+							<li>
+								<a
+									href="/contact"
+									className="text-gray-600 hover:text-yellow-500 transition-colors hover:cursor-pointer"
+								>
+									お問い合わせ
 								</a>
 							</li>
 						</ul>

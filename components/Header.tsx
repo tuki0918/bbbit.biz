@@ -18,9 +18,8 @@ export default function Header() {
 	}, []);
 
 	const menuItems = [
-		{ label: "事業内容", href: "business" },
-		{ label: "実績", href: "works" },
-		{ label: "お問い合わせ", href: "contact" },
+		{ label: "BUSINESS", href: "business" },
+		{ label: "WORKS", href: "works" },
 	];
 
 	return (
