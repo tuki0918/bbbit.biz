@@ -45,7 +45,7 @@ export default function Works() {
 				<div className="grid md:grid-cols-3 gap-8">
 					{works.map((work, index) => (
 						<motion.div
-							key={index}
+							key={work.title}
 							initial={{ opacity: 0, y: 20 }}
 							animate={inView ? { opacity: 1, y: 0 } : {}}
 							transition={{ duration: 0.6, delay: index * 0.2 }}

@@ -69,33 +69,45 @@ export default function Contact() {
 						className="space-y-6"
 					>
 						<div>
-							<label className="block text-sm font-medium text-gray-700 mb-2">
+							<label
+								htmlFor="name"
+								className="block text-sm font-medium text-gray-700 mb-2"
+							>
 								お名前
 							</label>
 							<input
 								type="text"
+								name="name"
 								className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
 							/>
 						</div>
 
 						<div>
-							<label className="block text-sm font-medium text-gray-700 mb-2">
+							<label
+								htmlFor="email"
+								className="block text-sm font-medium text-gray-700 mb-2"
+							>
 								メールアドレス
 							</label>
 							<input
 								type="email"
+								name="email"
 								className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
 							/>
 						</div>
 
 						<div>
-							<label className="block text-sm font-medium text-gray-700 mb-2">
+							<label
+								htmlFor="message"
+								className="block text-sm font-medium text-gray-700 mb-2"
+							>
 								お問い合わせ内容
 							</label>
 							<textarea
 								rows={4}
+								name="message"
 								className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
-							></textarea>
+							/>
 						</div>
 
 						<button

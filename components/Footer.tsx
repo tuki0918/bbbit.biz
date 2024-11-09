@@ -1,18 +1,9 @@
 "use client";
 
 import type React from "react";
-import { scrollToElement } from "../utils/scroll";
+import { Link } from "react-scroll";
 
 export default function Footer() {
-	const handleNavClick = (
-		e: React.MouseEvent<HTMLAnchorElement>,
-		href: string,
-	) => {
-		e.preventDefault();
-		const elementId = href.replace("#", "");
-		scrollToElement(elementId);
-	};
-
 	return (
 		<footer className="bg-gray-50 py-12">
 			<div className="container mx-auto px-4">
@@ -34,31 +25,34 @@ export default function Footer() {
 						<h4 className="font-semibold text-gray-900 mb-4">リンク</h4>
 						<ul className="space-y-2">
 							<li>
-								<a
-									href="#services"
-									className="text-gray-600 hover:text-yellow-500 transition-colors"
-									onClick={(e) => handleNavClick(e, "#services")}
+								<Link
+									to="services"
+									smooth={true}
+									duration={500}
+									className="text-gray-600 hover:text-yellow-500 transition-colors hover:cursor-pointer"
 								>
 									事業内容
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
-									href="#works"
-									className="text-gray-600 hover:text-yellow-500 transition-colors"
-									onClick={(e) => handleNavClick(e, "#works")}
+								<Link
+									to="works"
+									smooth={true}
+									duration={500}
+									className="text-gray-600 hover:text-yellow-500 transition-colors hover:cursor-pointer"
 								>
 									実績
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
-									href="#contact"
-									className="text-gray-600 hover:text-yellow-500 transition-colors"
-									onClick={(e) => handleNavClick(e, "#contact")}
+								<Link
+									to="contact"
+									smooth={true}
+									duration={500}
+									className="text-gray-600 hover:text-yellow-500 transition-colors hover:cursor-pointer"
 								>
 									お問い合わせ
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</div>
@@ -69,7 +63,7 @@ export default function Footer() {
 							<li>
 								<a
 									href="/privacy"
-									className="text-gray-600 hover:text-yellow-500 transition-colors"
+									className="text-gray-600 hover:text-yellow-500 transition-colors hover:cursor-pointer"
 								>
 									プライバシーポリシー
 								</a>
@@ -77,7 +71,7 @@ export default function Footer() {
 							<li>
 								<a
 									href="/legal"
-									className="text-gray-600 hover:text-yellow-500 transition-colors"
+									className="text-gray-600 hover:text-yellow-500 transition-colors hover:cursor-pointer"
 								>
 									特定商取引法について
 								</a>

@@ -2,9 +2,8 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import type React from "react";
 import { useEffect, useState } from "react";
-import { scrollToElement } from "../utils/scroll";
+import { Link } from "react-scroll";
 
 export default function Header() {
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -12,27 +11,16 @@ export default function Header() {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			setIsScrolled(window.scrollY > 20);
+			setIsScrolled(window.scrollY > 0);
 		};
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
-	const handleNavClick = (
-		e: React.MouseEvent<HTMLAnchorElement>,
-		href: string,
-	) => {
-		e.preventDefault();
-		const elementId = href.replace("#", "");
-		scrollToElement(elementId);
-		setIsMobileMenuOpen(false);
-	};
-
 	const menuItems = [
-		{ label: "トップ", href: "#top" },
-		{ label: "事業内容", href: "#services" },
-		{ label: "実績", href: "#works" },
-		{ label: "お問い合わせ", href: "#contact" },
+		{ label: "事業内容", href: "services" },
+		{ label: "実績", href: "works" },
+		{ label: "お問い合わせ", href: "contact" },
 	];
 
 	return (
@@ -46,30 +34,33 @@ export default function Header() {
 			>
 				<div className="container mx-auto px-4">
 					<div className="flex items-center justify-between h-16">
-						<a
-							href="#top"
-							className="text-xl font-bold text-yellow-500"
-							onClick={(e) => handleNavClick(e, "#top")}
+						<Link
+							to="top"
+							smooth={true}
+							duration={500}
+							className="text-xl font-bold text-yellow-500 hover:cursor-pointer"
 						>
 							Company
-						</a>
+						</Link>
 
 						{/* Desktop Menu */}
 						<nav className="hidden md:flex space-x-8">
 							{menuItems.map((item) => (
-								<a
+								<Link
 									key={item.label}
-									href={item.href}
-									className="text-gray-700 hover:text-yellow-500 transition-colors"
-									onClick={(e) => handleNavClick(e, item.href)}
+									to={item.href}
+									smooth={true}
+									duration={500}
+									className="text-gray-700 hover:text-yellow-500 transition-colors hover:cursor-pointer"
 								>
 									{item.label}
-								</a>
+								</Link>
 							))}
 						</nav>
 
 						{/* Mobile Menu Button */}
 						<button
+							type="button"
 							className="md:hidden text-gray-700"
 							onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
 						>
@@ -90,14 +81,16 @@ export default function Header() {
 					>
 						<nav className="container mx-auto px-4 py-4">
 							{menuItems.map((item) => (
-								<a
+								<Link
 									key={item.label}
-									href={item.href}
-									className="block py-3 text-gray-700 hover:text-yellow-500 transition-colors"
-									onClick={(e) => handleNavClick(e, item.href)}
+									to={item.href}
+									smooth={true}
+									duration={500}
+									className="block py-3 text-gray-700 hover:text-yellow-500 transition-colors hover:cursor-pointer"
+									onClick={() => setIsMobileMenuOpen(false)}
 								>
 									{item.label}
-								</a>
+								</Link>
 							))}
 						</nav>
 					</motion.div>

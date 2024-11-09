@@ -45,7 +45,7 @@ export default function Services() {
 				<div className="grid md:grid-cols-3 gap-8">
 					{services.map((service, index) => (
 						<motion.div
-							key={index}
+							key={service.title}
 							initial={{ opacity: 0, y: 20 }}
 							animate={inView ? { opacity: 1, y: 0 } : {}}
 							transition={{ duration: 0.6, delay: index * 0.2 }}
