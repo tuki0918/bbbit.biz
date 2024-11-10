@@ -21,8 +21,10 @@ const Main: FC = () => {
 				<div className="snap-start" id="works">
 					<Works />
 				</div>
+				<div className="snap-start" id="footer">
+					<Footer />
+				</div>
 			</main>
-			<Footer />
 		</>
 	);
 };

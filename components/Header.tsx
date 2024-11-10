@@ -17,7 +17,10 @@ export default function Header() {
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
 
-	const menuItems = [
+	const menuItems: {
+		label: string;
+		href: string;
+	}[] = [
 		{ label: "BUSINESS", href: "business" },
 		{ label: "WORKS", href: "works" },
 	];

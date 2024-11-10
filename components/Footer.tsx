@@ -48,18 +48,18 @@ export default function Footer() {
 						<ul className="space-y-2">
 							<li>
 								<a
-									href="/privacy"
+									href="/legal"
 									className="text-gray-600 hover:text-yellow-500 transition-colors hover:cursor-pointer"
 								>
-									プライバシーポリシー
+									特定商取引法に基づく表記
 								</a>
 							</li>
 							<li>
 								<a
-									href="/legal"
+									href="/privacy"
 									className="text-gray-600 hover:text-yellow-500 transition-colors hover:cursor-pointer"
 								>
-									特定商取引法について
+									プライバシーポリシー
 								</a>
 							</li>
 							<li>
