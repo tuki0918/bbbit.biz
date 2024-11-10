@@ -18,7 +18,7 @@ export default function Page() {
 					<iframe
 						className="mx-auto"
 						title="お問い合わせ"
-						src="https://docs.google.com/forms/d/e/1FAIpQLSf1iar5AUyFeTrZxeCxAOhgPRA4uTjI0eVbjcaJC56p_59fdA/viewform?embedded=true"
+						src="https://docs.google.com/forms/d/e/1FAIpQLScBG5HiL4CFRe9LMaYC3Fvs3DKHcYAK-yXYEZLTZ9joRL8uNw/viewform?embedded=true"
 						width="640"
 						height="640"
 						frameBorder={0}
