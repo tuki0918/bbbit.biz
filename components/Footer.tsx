@@ -1,7 +1,7 @@
 "use client";
 
 import { sourGummy } from "@/app/fonts";
-import { SITE_DESCRIPTION, SITE_NAME } from "@/config/app";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_NAME_JP } from "@/config/app";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
@@ -11,13 +11,11 @@ export default function Footer() {
 			<div className="container mx-auto px-4">
 				<div className="grid md:grid-cols-6 gap-8 mb-8">
 					<div className="col-span-3">
-						<h3
-							className={cn(
-								sourGummy.className,
-								"text-2xl font-bold text-yellow-500 mb-4",
-							)}
-						>
-							<Link href="/">{SITE_NAME}</Link>
+						<h3 className={cn(sourGummy.className, "text-2xl font-bold mb-4")}>
+							<Link href="/">
+								{SITE_NAME}
+								<span className="text-xs">（{SITE_NAME_JP}）</span>
+							</Link>
 						</h3>
 						<p className="text-sm text-gray-600 mb-4">{SITE_DESCRIPTION}</p>
 						<p className="text-sm text-gray-600 mb-4">
