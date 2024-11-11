@@ -1,6 +1,6 @@
 "use client";
 
-import { sourGummy } from "@/app/fonts";
+import { geistSans, sourGummy } from "@/app/fonts";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_NAME_JP } from "@/config/app";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -11,7 +11,7 @@ export default function Footer() {
 			<div className="container mx-auto px-4">
 				<div className="grid md:grid-cols-6 gap-8 mb-8">
 					<div className="col-span-3">
-						<h3 className={cn(sourGummy.className, "text-2xl font-bold mb-4")}>
+						<h3 className={cn(sourGummy.className, "text-4xl font-bold mb-4")}>
 							<Link href="/">
 								{SITE_NAME}
 								<span className="text-xs">（{SITE_NAME_JP}）</span>
@@ -32,7 +32,14 @@ export default function Footer() {
 					</div>
 
 					<div className="col-span-1">
-						<h4 className="font-semibold text-gray-900 mb-4">MENU</h4>
+						<h4
+							className={cn(
+								geistSans.className,
+								"font-bold text-gray-900 mb-4",
+							)}
+						>
+							MENU
+						</h4>
 						<ul className="space-y-2">
 							<li>
 								<Link
@@ -54,7 +61,14 @@ export default function Footer() {
 					</div>
 
 					<div className="col-span-2">
-						<h4 className="font-semibold text-gray-900 mb-4">LINKS</h4>
+						<h4
+							className={cn(
+								geistSans.className,
+								"font-bold text-gray-900 mb-4",
+							)}
+						>
+							LINKS
+						</h4>
 						<ul className="space-y-2">
 							<li>
 								<a
