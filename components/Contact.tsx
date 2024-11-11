@@ -26,7 +26,7 @@ export default function Contact() {
 				<div className="flex items-center justify-center">
 					<div>
 						<div className="mb-16 w-3/4 md:w-auto mx-auto">
-							サービスや製品に関するご相談など、お気軽にお問い合わせください。
+							商品・サービスに関するご相談など、お気軽にお問い合わせください。
 						</div>
 
 						<Link

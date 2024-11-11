@@ -39,7 +39,7 @@ export default function Business() {
 					transition={{ duration: 0.6 }}
 					className="text-4xl font-bold text-center mb-16"
 				>
-					BUSINESS
+					事業内容
 				</motion.h2>
 
 				<div className="grid md:grid-cols-3 gap-8">

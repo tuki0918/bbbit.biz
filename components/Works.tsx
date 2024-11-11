@@ -39,7 +39,7 @@ export default function Works() {
 					transition={{ duration: 0.6 }}
 					className="text-4xl font-bold text-center mb-16"
 				>
-					WORKS
+					商品・サービス
 				</motion.h2>
 
 				<div className="grid md:grid-cols-3 gap-8">
