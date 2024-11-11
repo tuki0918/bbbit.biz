@@ -8,7 +8,7 @@ export default function Hero() {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			transition={{ duration: 0.5 }}
-			className="flex-grow pt-6 pb-16 bg-gray-50"
+			className="flex-grow py-6 bg-gray-50"
 		>
 			<div className="container mx-auto px-4">
 				<h1 className="text-4xl font-bold mb-8">プライバシーポリシー</h1>
