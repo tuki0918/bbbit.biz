@@ -1,13 +1,14 @@
 import { geistMono, geistSans } from "@/app/fonts";
 import type { Metadata } from "next";
 import "./globals.css";
+import { SITE_DESCRIPTION, SITE_DOMAIN, SITE_NAME_JP } from "@/config/app";
 
 export const metadata: Metadata = {
 	title: {
-		template: "%s - bbbit.biz",
-		default: "bbbit.biz",
+		template: `%s - ${SITE_DOMAIN}`,
+		default: `${SITE_NAME_JP} - ${SITE_DOMAIN}`,
 	},
-	description: "",
+	description: SITE_DESCRIPTION,
 };
 
 export default function RootLayout({
