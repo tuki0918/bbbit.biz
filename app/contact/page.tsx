@@ -1,4 +1,4 @@
-import Contact from "@/components/Contact";
+import ContactForm from "@/components/ContactForm";
 import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function Page() {
 	return (
 		<>
-			<Contact />
+			<ContactForm />
 		</>
 	);
 }
