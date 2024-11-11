@@ -11,7 +11,7 @@ export default function Contact() {
 			className="flex-grow pt-6 pb-16 bg-gray-50"
 		>
 			<div className="container mx-auto px-4">
-				<h1 className="text-4xl font-bold mb-8">お問い合わせ</h1>
+				<h1 className="text-4xl font-bold mb-8">お問い合わせフォーム</h1>
 
 				<div className="bg-white rounded-lg shadow-sm p-8">
 					<section className="border-b pb-6 mb-6">
