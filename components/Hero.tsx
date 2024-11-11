@@ -4,8 +4,9 @@ import { sourGummy } from "@/app/fonts";
 import { SITE_NAME } from "@/config/app";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { CircleArrowDown } from "lucide-react";
-import { Link } from "react-scroll";
+import { ChevronRight, CircleArrowDown } from "lucide-react";
+import Link from "next/link";
+import { Link as Scroll } from "react-scroll";
 
 export default function Hero() {
 	return (
@@ -29,6 +30,16 @@ export default function Hero() {
 					<span className="font-bold text-xl">ビビビ</span>
 					」をお届けします。
 				</p>
+
+				{/* <p>
+					<Link
+						className="group mt-8 w-[280px] mx-auto md:ml-auto p-3 bg-orange-950 hover:bg-orange-900 text-white rounded-full font-bold flex justify-between items-center shadow-lg hover:shadow-xl transition-shadow duration-300"
+						href="/"
+					>
+						<div className="flex-1 text-center pl-4">About US</div>
+						<ChevronRight className="transition group-hover:translate-x-1" />
+					</Link>
+				</p> */}
 			</motion.div>
 
 			<motion.div
@@ -42,14 +53,14 @@ export default function Hero() {
 				}}
 				className="absolute bottom-8"
 			>
-				<Link
+				<Scroll
 					to="business"
 					smooth={true}
 					duration={500}
 					className="hover:cursor-pointer"
 				>
 					<CircleArrowDown className="w-12 h-12 text-orange-950" />
-				</Link>
+				</Scroll>
 			</motion.div>
 		</section>
 	);
