@@ -16,57 +16,79 @@ export default function Hero() {
 				<div className="bg-white rounded-lg shadow-sm p-8">
 					<div className="space-y-8">
 						<div className="border-b pb-6">
-							<h2 className="text-lg font-semibold mb-3">事業者の名称</h2>
-							<p className="text-gray-600">株式会社Company</p>
+							<h2 className="text-lg font-semibold mb-3">屋号</h2>
+							<p className="text-gray-600">bbbit（ビビビット）</p>
 						</div>
 
 						<div className="border-b pb-6">
 							<h2 className="text-lg font-semibold mb-3">代表者名</h2>
-							<p className="text-gray-600">代表取締役 山田 太郎</p>
+							<p className="text-gray-600">山本 雄大</p>
 						</div>
 
 						<div className="border-b pb-6">
 							<h2 className="text-lg font-semibold mb-3">所在地</h2>
 							<p className="text-gray-600">
-								〒100-0001
-								<br />
-								東京都千代田区1-1-1
+								請求があれば、遅滞なく開示します。
 							</p>
 						</div>
 
 						<div className="border-b pb-6">
-							<h2 className="text-lg font-semibold mb-3">連絡先</h2>
+							<h2 className="text-lg font-semibold mb-3">電話番号</h2>
 							<p className="text-gray-600">
-								電話番号：03-1234-5678
-								<br />
-								メールアドレス：info@example.com
-								<br />
-								受付時間：平日9:00～17:00
+								請求があれば、遅滞なく開示します。
 							</p>
 						</div>
 
 						<div className="border-b pb-6">
-							<h2 className="text-lg font-semibold mb-3">料金</h2>
-							<p className="text-gray-600">
-								サービス料金は、個別のご相談内容に応じて設定させていただきます。
-								<br />
-								具体的な料金については、お見積りの際に提示させていただきます。
-							</p>
+							<h2 className="text-lg font-semibold mb-3">メールアドレス</h2>
+							<p className="text-gray-600">contact@bbbit.biz</p>
 						</div>
 
 						<div className="border-b pb-6">
 							<h2 className="text-lg font-semibold mb-3">支払方法</h2>
 							<p className="text-gray-600">
-								銀行振込（お支払い条件は個別契約に基づきます）
+								クレジットカードまたは国内の銀行振込
 							</p>
 						</div>
 
 						<div className="border-b pb-6">
-							<h2 className="text-lg font-semibold mb-3">契約の解除</h2>
+							<h2 className="text-lg font-semibold mb-3">商品引渡し時期</h2>
 							<p className="text-gray-600">
-								契約の解除については、個別の契約内容に基づき対応させていただきます。
+								＜配送が必要な商品＞
 								<br />
-								詳細は契約書をご確認ください。
+								注文は 3 ～ 5 営業日以内に処理され、商品は 14
+								日以内に到着します。
+							</p>
+							<p className="text-gray-600 mt-2">
+								＜デジタルコンテンツ＞
+								<br />
+								注文後すぐにご利用いただけます。
+							</p>
+						</div>
+
+						<div className="border-b pb-6">
+							<h2 className="text-lg font-semibold mb-3">商品以外の必要料金</h2>
+							<p className="text-gray-600">
+								＜配送が必要な商品＞
+								<br />
+								・配送料（全国一律 1,000円 / 箱）
+							</p>
+						</div>
+
+						<div>
+							<h2 className="text-lg font-semibold mb-3">
+								返品・キャンセル・不良品
+							</h2>
+							<p className="text-gray-600">
+								ご注文内容と異なる、商品に欠陥がある場合を除き、返品・キャンセルには応じかねます。
+								<br />
+								商品に不備がある場合は、商品到着後7日以内にメールにてご連絡ください。
+							</p>
+							<p className="text-gray-600 mt-2">
+								＜デジタルコンテンツ＞
+								<br />
+								キャンセルを希望される場合は、お申込みから7日以内にメールにてお問い合わせをお願いいたします。
+								サービス提供後のキャンセル・返金には応じかねます。
 							</p>
 						</div>
 					</div>
