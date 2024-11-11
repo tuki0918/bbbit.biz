@@ -1,7 +1,9 @@
 "use client";
 
-import type React from "react";
-import { Link } from "react-scroll";
+import { sourGummy } from "@/app/fonts";
+import { SITE_DESCRIPTION, SITE_NAME } from "@/config/app";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export default function Footer() {
 	return (
@@ -9,12 +11,15 @@ export default function Footer() {
 			<div className="container mx-auto px-4">
 				<div className="grid md:grid-cols-4 gap-8 mb-8">
 					<div className="col-span-2">
-						<h3 className="text-xl font-bold text-yellow-500 mb-4">bbbit</h3>
-						<p className="text-gray-600 mb-4">
-							未来を見据えた価値創造のパートナーとして、
-							お客様のビジネスの成長をサポートいたします。
-						</p>
-						<p className="text-gray-600">contact@bbbit.biz</p>
+						<h3
+							className={cn(
+								sourGummy.className,
+								"text-2xl font-bold text-yellow-500 mb-4",
+							)}
+						>
+							<Link href="/">{SITE_NAME}</Link>
+						</h3>
+						<p className="text-sm text-gray-600 mb-4">{SITE_DESCRIPTION}</p>
 					</div>
 
 					<div>
@@ -22,9 +27,7 @@ export default function Footer() {
 						<ul className="space-y-2">
 							<li>
 								<Link
-									to="business"
-									smooth={true}
-									duration={500}
+									href="/#business"
 									className="text-gray-600 hover:text-yellow-500 transition-colors hover:cursor-pointer"
 								>
 									事業内容
@@ -32,9 +35,7 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									to="works"
-									smooth={true}
-									duration={500}
+									href="/#works"
 									className="text-gray-600 hover:text-yellow-500 transition-colors hover:cursor-pointer"
 								>
 									実績
@@ -76,7 +77,7 @@ export default function Footer() {
 
 				<div className="border-t border-gray-200 pt-8">
 					<p className="text-center text-gray-600 text-sm">
-						© {new Date().getFullYear()} bbbit. All rights reserved.
+						&copy; 2024 bbbit. All rights reserved.
 					</p>
 				</div>
 			</div>
