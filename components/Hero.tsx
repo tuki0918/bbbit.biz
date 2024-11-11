@@ -25,7 +25,7 @@ export default function Hero() {
 					{SITE_NAME}
 				</h1>
 				<p className="mb-12 w-3/4 md:w-auto mx-auto">
-					私達は、製品やサービス通じてお客様の日常が楽しくなるような「
+					私たちは、製品やサービス通じてお客様の日常が楽しくなるような「
 					<span className="font-bold text-xl">ビビビ</span>
 					」をお届けします。
 				</p>
