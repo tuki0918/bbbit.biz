@@ -1,4 +1,5 @@
 import { sourGummy } from "@/app/fonts";
+import { SITE_NAME } from "@/config/app";
 import { cn } from "@/lib/utils";
 import type { FC } from "react";
 
@@ -12,7 +13,7 @@ const SiteTextLogo: FC<{
 				"text-white": isDark,
 			})}
 		>
-			bbbit
+			{SITE_NAME}
 		</span>
 	);
 };
