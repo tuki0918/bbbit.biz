@@ -1,4 +1,4 @@
-import { geistMono, geistSans } from "@/app/fonts";
+import { geistMono, geistSans, mPlusRounded1c } from "@/app/fonts";
 import type { Metadata } from "next";
 import "./globals.css";
 import { SITE_DESCRIPTION, SITE_DOMAIN, SITE_NAME_JP } from "@/config/app";
@@ -19,7 +19,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+				className={`${mPlusRounded1c.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
 				{children}
 			</body>
