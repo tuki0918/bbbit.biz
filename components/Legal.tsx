@@ -1,5 +1,6 @@
 "use client";
 
+import QuoteAccordion from "@/components/QuoteAccordion";
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -16,8 +17,8 @@ export default function Hero() {
 				<div className="bg-white rounded-lg shadow-sm p-8">
 					<div className="space-y-8">
 						<div className="border-b pb-6">
-							<h2 className="text-lg font-semibold mb-3">屋号</h2>
-							<p className="text-gray-600">bbbit（ビビビット）</p>
+							<h2 className="text-lg font-semibold mb-3">事業者名</h2>
+							<p className="text-gray-600">屋号：bbbit（ビビビット）</p>
 						</div>
 
 						<div className="border-b pb-6">
@@ -28,14 +29,14 @@ export default function Hero() {
 						<div className="border-b pb-6">
 							<h2 className="text-lg font-semibold mb-3">所在地</h2>
 							<p className="text-gray-600">
-								請求があれば、遅滞なく開示します。
+								ご請求をいただいた場合は、遅滞なく開示いたします。
 							</p>
 						</div>
 
 						<div className="border-b pb-6">
 							<h2 className="text-lg font-semibold mb-3">電話番号</h2>
 							<p className="text-gray-600">
-								請求があれば、遅滞なく開示します。
+								ご請求をいただいた場合は、遅滞なく開示いたします。
 							</p>
 						</div>
 
@@ -45,9 +46,40 @@ export default function Hero() {
 						</div>
 
 						<div className="border-b pb-6">
+							<h2 className="text-lg font-semibold mb-3">販売価格</h2>
+							<p className="text-gray-600">
+								各商品の紹介ページに記載している価格とします。
+							</p>
+						</div>
+
+						<div className="border-b pb-6">
 							<h2 className="text-lg font-semibold mb-3">支払方法</h2>
 							<p className="text-gray-600">
 								クレジットカードまたは国内の銀行振込
+							</p>
+						</div>
+
+						<div>
+							<h2 className="text-lg font-semibold mb-3">決済期間</h2>
+							<p className="text-gray-600">
+								クレジットカード決済：ご注文時にお支払いが確定します。
+							</p>
+							<p className="text-gray-600 mt-2">
+								銀行振込：注文から 3日以内にお振り込みいただく必要があります。
+							</p>
+						</div>
+
+						<div className="border-b pb-6">
+							<h2 className="text-lg font-semibold mb-3">商品以外の必要料金</h2>
+							<p className="text-gray-600 mt-2">
+								＜配送が必要な商品＞
+								<br />
+								・配送料（全国一律 1,000円 / 箱）
+							</p>
+							<p className="text-gray-600">
+								＜銀行振込でご購入の際＞
+								<br />
+								振込手数料
 							</p>
 						</div>
 
@@ -66,30 +98,39 @@ export default function Hero() {
 							</p>
 						</div>
 
-						<div className="border-b pb-6">
-							<h2 className="text-lg font-semibold mb-3">商品以外の必要料金</h2>
+						<div>
+							<h2 className="text-lg font-semibold mb-3">
+								キャンセル・返品・不良品
+							</h2>
 							<p className="text-gray-600">
-								＜配送が必要な商品＞
+								購入後のお客様都合によるキャンセルや返品はお受けできません。
+							</p>
+							<p className="text-gray-600 mt-2">
+								＜商品に不備がある場合＞
 								<br />
-								・配送料（全国一律 1,000円 / 箱）
+								瑕疵対応として返金又は新しい商品と交換いたします。商品到着後7日以内にメールにてご連絡ください。
+							</p>
+							<p className="text-gray-600 mt-2">
+								＜デジタルコンテンツ＞
+								<br />
+								デジタルコンテンツの特性上、返品が不可能であるため、購入確定後のキャンセル・返金についてはお受けできません。
+								<br />
+								なお、購入されたコンテンツが閲覧できないなどの場合は、お問合せください。
 							</p>
 						</div>
 
 						<div>
 							<h2 className="text-lg font-semibold mb-3">
-								返品・キャンセル・不良品
+								ソフトウェアの動作環境
 							</h2>
-							<p className="text-gray-600">
-								ご注文内容と異なる、商品に欠陥がある場合を除き、返品・キャンセルには応じかねます。
-								<br />
-								商品に不備がある場合は、商品到着後7日以内にメールにてご連絡ください。
-							</p>
-							<p className="text-gray-600 mt-2">
-								＜デジタルコンテンツ＞
-								<br />
-								キャンセルを希望される場合は、お申込みから7日以内にメールにてお問い合わせをお願いいたします。
-								サービス提供後のキャンセル・返金には応じかねます。
-							</p>
+							<div className="text-gray-600">
+								<QuoteAccordion
+									title={"動作環境"}
+									quote={`
+									動作環境等は各ソフトウェア・データ類の商品ページに表示しております。
+									`}
+								/>
+							</div>
 						</div>
 					</div>
 				</div>
