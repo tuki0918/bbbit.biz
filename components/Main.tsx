@@ -2,7 +2,6 @@
 
 import Business from "@/components/Business";
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Works from "@/components/Works";
 import type { FC } from "react";
@@ -10,8 +9,7 @@ import type { FC } from "react";
 const Main: FC = () => {
 	return (
 		<>
-			<Header />
-			<main className="snap-y snap-mandatory h-screen overflow-y-scroll">
+			<main className="snap-y snap-mandatory h-screen">
 				<div className="snap-start" id="top">
 					<Hero />
 				</div>
