@@ -1,6 +1,7 @@
 "use client";
 
 import Business from "@/components/Business";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Works from "@/components/Works";
@@ -18,6 +19,9 @@ const Main: FC = () => {
 				</div>
 				<div className="snap-start" id="works">
 					<Works />
+				</div>
+				<div className="snap-start" id="contact">
+					<Contact />
 				</div>
 				<div className="snap-start" id="footer">
 					<Footer />
