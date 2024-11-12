@@ -1,26 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Lightbulb, Rocket, Users } from "lucide-react";
+import { FileHeart, Rocket, Users } from "lucide-react";
 import { useInView } from "react-intersection-observer";
 
 const business = [
 	{
-		icon: Lightbulb,
-		title: "戦略コンサルティング",
-		description:
-			"ビジネス戦略の策定から実行まで、包括的なサポートを提供します。",
+		icon: Rocket,
+		title: "ソフトウェア開発",
+		description: "...",
 	},
 	{
-		icon: Rocket,
-		title: "デジタルトランスフォーメーション",
-		description:
-			"最新技術を活用し、ビジネスプロセスの効率化と革新を実現します。",
+		icon: FileHeart,
+		title: "デジタルコンテンツの制作・販売",
+		description: "...",
 	},
 	{
 		icon: Users,
-		title: "人材育成支援",
-		description: "次世代リーダーの育成と組織力の強化をサポートします。",
+		title: "インターネットサービスの運営",
+		description: "...",
 	},
 ];
 
