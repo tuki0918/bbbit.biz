@@ -60,7 +60,7 @@ export default function Hero() {
 				className="absolute bottom-8"
 			>
 				<Scroll
-					to="business"
+					to="news"
 					smooth={true}
 					duration={500}
 					className="hover:cursor-pointer"

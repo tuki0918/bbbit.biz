@@ -6,6 +6,36 @@ import { cn } from "@/lib/utils";
 import { BookOpen, Store } from "lucide-react";
 import Link from "next/link";
 
+const menus = [
+	{
+		label: "ニュース",
+		href: "/#news",
+	},
+	{
+		label: "事業内容",
+		href: "/#business",
+	},
+	{
+		label: "商品・サービス",
+		href: "/#works",
+	},
+] as const;
+
+const links = [
+	{
+		label: "特定商取引法に基づく表記",
+		href: "/legal",
+	},
+	{
+		label: "プライバシーポリシー",
+		href: "/privacy",
+	},
+	{
+		label: "お問い合わせ",
+		href: "/contact",
+	},
+] as const;
+
 export default function Footer() {
 	return (
 		<footer className="bg-gray-50 pt-12">
@@ -48,22 +78,16 @@ export default function Footer() {
 							MENU
 						</h4>
 						<ul className="space-y-2">
-							<li>
-								<Link
-									href="/#business"
-									className="text-gray-600 hover:text-yellow-500 transition-colors hover:cursor-pointer"
-								>
-									事業内容
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="/#works"
-									className="text-gray-600 hover:text-yellow-500 transition-colors hover:cursor-pointer"
-								>
-									実績
-								</Link>
-							</li>
+							{menus.map((menu) => (
+								<li key={menu.label}>
+									<Link
+										href={menu.href}
+										className="text-gray-600 hover:text-gray-400 transition-colors hover:cursor-pointer"
+									>
+										{menu.label}
+									</Link>
+								</li>
+							))}
 						</ul>
 					</div>
 
@@ -77,30 +101,16 @@ export default function Footer() {
 							LINKS
 						</h4>
 						<ul className="space-y-2">
-							<li>
-								<a
-									href="/legal"
-									className="text-gray-600 hover:text-yellow-500 transition-colors hover:cursor-pointer"
-								>
-									特定商取引法に基づく表記
-								</a>
-							</li>
-							<li>
-								<a
-									href="/privacy"
-									className="text-gray-600 hover:text-yellow-500 transition-colors hover:cursor-pointer"
-								>
-									プライバシーポリシー
-								</a>
-							</li>
-							<li>
-								<a
-									href="/contact"
-									className="text-gray-600 hover:text-yellow-500 transition-colors hover:cursor-pointer"
-								>
-									お問い合わせ
-								</a>
-							</li>
+							{links.map((link) => (
+								<li key={link.label}>
+									<Link
+										href={link.href}
+										className="text-gray-600 hover:text-gray-400 transition-colors hover:cursor-pointer"
+									>
+										{link.label}
+									</Link>
+								</li>
+							))}
 						</ul>
 					</div>
 				</div>

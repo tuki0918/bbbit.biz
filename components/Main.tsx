@@ -4,6 +4,7 @@ import Business from "@/components/Business";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
+import News from "@/components/News";
 import Works from "@/components/Works";
 import type { FC } from "react";
 
@@ -13,6 +14,9 @@ const Main: FC = () => {
 			<main className="snap-y snap-mandatory h-screen">
 				<div className="snap-start" id="top">
 					<Hero />
+				</div>
+				<div className="snap-start" id="news">
+					<News />
 				</div>
 				<div className="snap-start" id="business">
 					<Business />
