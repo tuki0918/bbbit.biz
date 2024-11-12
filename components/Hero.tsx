@@ -6,9 +6,12 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ChevronRight, CircleArrowDown } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 import { Link as Scroll } from "react-scroll";
 
 export default function Hero() {
+	const [isPushed, setIsPushed] = useState(false);
+
 	return (
 		<section className="h-screen relative flex items-center justify-center bg-amber-400 overflow-hidden">
 			<motion.div
@@ -31,15 +34,18 @@ export default function Hero() {
 					」をお届けします。
 				</p>
 
-				{/* <p>
-					<Link
+				<p>
+					<button
+						type="button"
+						onClick={() => setIsPushed(true)}
 						className="group mt-8 w-[280px] mx-auto md:ml-auto p-3 bg-orange-950 hover:bg-orange-900 text-white rounded-full font-bold flex justify-between items-center shadow-lg hover:shadow-xl transition-shadow duration-300"
-						href="/"
 					>
-						<div className="flex-1 text-center pl-4">About US</div>
+						<span className="flex-1 text-center pl-4">
+							{isPushed ? "コンテンツ準備中" : "「ビビビ」について"}
+						</span>
 						<ChevronRight className="transition group-hover:translate-x-1" />
-					</Link>
-				</p> */}
+					</button>
+				</p>
 			</motion.div>
 
 			<motion.div

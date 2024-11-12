@@ -33,7 +33,7 @@ export default function Contact() {
 							className="group mt-8 w-[280px] mx-auto md:ml-auto p-3 bg-sky-950 hover:bg-sky-900 text-white rounded-full font-bold flex justify-between items-center shadow-lg hover:shadow-xl transition-shadow duration-300"
 							href="/contact"
 						>
-							<div className="flex-1 text-center pl-4">お問い合わせ</div>
+							<span className="flex-1 text-center pl-4">お問い合わせ</span>
 							<ChevronRight className="transition group-hover:translate-x-1" />
 						</Link>
 					</div>
