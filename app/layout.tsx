@@ -2,6 +2,8 @@ import { geistMono, geistSans, mPlusRounded1c } from "@/app/fonts";
 import type { Metadata } from "next";
 import "./globals.css";
 import { SITE_DESCRIPTION, SITE_DOMAIN, SITE_NAME_JP } from "@/config/app";
+import { GOOGLE_ANALYTICS_ID } from "@/config/app";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
 	title: {
@@ -23,6 +25,7 @@ export default function RootLayout({
 			>
 				{children}
 			</body>
+			<GoogleAnalytics gaId={GOOGLE_ANALYTICS_ID} />
 		</html>
 	);
 }
