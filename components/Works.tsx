@@ -5,22 +5,19 @@ import { useInView } from "react-intersection-observer";
 
 const works = [
 	{
-		title: "企業戦略改革",
-		client: "大手製造業",
-		image:
-			"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+		title: "子猫サバイバー",
+		client: "Webサイト",
+		image: "/commig_soon.png",
 	},
 	{
-		title: "デジタル変革支援",
-		client: "金融サービス企業",
-		image:
-			"https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+		title: "123++（アンケート投票）",
+		client: "Webサイト",
+		image: "/commig_soon.png",
 	},
 	{
-		title: "組織改革プロジェクト",
-		client: "IT企業",
-		image:
-			"https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+		title: "",
+		client: "デジタルコンテンツ",
+		image: "/commig_soon.png",
 	},
 ];
 
