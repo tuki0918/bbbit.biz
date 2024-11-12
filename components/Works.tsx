@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 
 const works = [
 	{
-		title: "子猫サバイバー",
+		title: "にゃんこサバイバー",
 		client: "Webサイト",
 		image: "/commig_soon.png",
 	},

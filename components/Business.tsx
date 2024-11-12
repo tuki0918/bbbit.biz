@@ -7,7 +7,7 @@ import { useInView } from "react-intersection-observer";
 const business = [
 	{
 		icon: Rocket,
-		title: "ソフトウェア開発",
+		title: "ソフトウェアの開発",
 		description: "...",
 	},
 	{
