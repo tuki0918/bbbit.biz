@@ -6,17 +6,17 @@ import { useInView } from "react-intersection-observer";
 const works = [
 	{
 		title: "にゃんこサバイバー",
-		client: "Webサイト",
+		category: "Webサイト",
 		image: "/commig_soon.png",
 	},
 	{
 		title: "123++（アンケート投票）",
-		client: "Webサイト",
+		category: "Webサイト",
 		image: "/commig_soon.png",
 	},
 	{
 		title: "",
-		client: "デジタルコンテンツ",
+		category: "デジタルコンテンツ",
 		image: "/commig_soon.png",
 	},
 ];
@@ -57,7 +57,7 @@ export default function Works() {
 							</div>
 							<div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white">
 								<h3 className="text-xl font-semibold mb-2">{work.title}</h3>
-								<p className="text-sm text-gray-200">{work.client}</p>
+								<p className="text-sm text-gray-200">{work.category}</p>
 							</div>
 						</motion.div>
 					))}
