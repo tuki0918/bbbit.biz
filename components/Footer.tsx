@@ -50,7 +50,7 @@ export default function Footer() {
 						</h3>
 						<p className="text-sm text-gray-600 mb-4">{SITE_DESCRIPTION}</p>
 						<p className="text-sm text-gray-600 mb-4 space-x-2 flex">
-							<Link href="/" title="X:準備中">
+							<Link href="https://x.com/bbbitX" title="X">
 								<span className="[&>svg]:h-6 [&>svg]:w-6 [&>svg]:fill-black inline-block">
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 										<title>X</title>
