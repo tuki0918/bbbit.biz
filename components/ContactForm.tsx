@@ -1,18 +1,22 @@
 "use client";
 
+import { sendMail } from "@/actions/sendMail";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
 import { LoaderCircle } from "lucide-react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 const formSchema = z.object({
 	name: z.string().min(1, "名前は必須です"),
 	email: z.string().email("正しいメールアドレスを入力してください"),
+	subject: z.string().min(1, "件名は必須です"),
 	message: z.string().min(1, "メッセージは必須です"),
 });
 
 export default function Contact() {
+	const [message, setMessage] = useState<string>("");
 	const {
 		register,
 		handleSubmit,
@@ -22,8 +26,23 @@ export default function Contact() {
 	});
 
 	const onSubmit = async (data: z.infer<typeof formSchema>) => {
-		//
+		try {
+			await sendMail({
+				name: data.name,
+				email: data.email,
+				subject: data.subject,
+				message: data.message,
+			});
+			setMessage("お問い合わせを受け付けました。");
+		} catch (error) {
+			setMessage("送信に失敗しました。");
+			console.error(error);
+		}
 	};
+
+	useEffect(() => {
+		if (message) alert(message);
+	}, [message]);
 
 	return (
 		<motion.div
@@ -44,7 +63,11 @@ export default function Contact() {
 						</p>
 					</section>
 
-					<div className="mx-auto max-w-[480px] mt-8">
+					<div className="text-center my-8">
+						{message && <p className="text-sm text-gray-600 mb-4">{message}</p>}
+					</div>
+
+					<div className="mx-auto max-w-[480px]">
 						<form onSubmit={handleSubmit(onSubmit)}>
 							<div className="mb-4">
 								<label
@@ -58,7 +81,7 @@ export default function Contact() {
 									id="name"
 									{...register("name")}
 									className="mt-2 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-									placeholder="山田太郎"
+									placeholder="山田 太郎"
 								/>
 								{errors.name && (
 									<p className="mt-1 sm:text-sm text-red-500">
@@ -88,6 +111,26 @@ export default function Contact() {
 								)}
 							</div>
 
+							<div className="mb-4">
+								<label
+									htmlFor="subject"
+									className="block text-sm font-medium text-gray-700"
+								>
+									件名
+								</label>
+								<input
+									type="text"
+									id="subject"
+									{...register("subject")}
+									className="mt-2 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+								/>
+								{errors.subject && (
+									<p className="mt-1 sm:text-sm text-red-500">
+										{errors.subject.message}
+									</p>
+								)}
+							</div>
+
 							<div className="mb-8">
 								<label
 									htmlFor="email"
@@ -99,7 +142,6 @@ export default function Contact() {
 									id="message"
 									{...register("message")}
 									className="min-h-[240px] mt-2 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-									placeholder=""
 								/>
 								{errors.message && (
 									<p className="mt-1 sm:text-sm text-red-500">
@@ -110,7 +152,7 @@ export default function Contact() {
 
 							<div className="mb-4 mt-8">
 								<button
-									type="button"
+									type="submit"
 									className="relative w-[280px] mx-auto md:ml-auto p-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full font-bold flex justify-between items-center shadow-lg hover:shadow-xl transition-shadow duration-300"
 								>
 									{isSubmitting && <LoaderCircle className="animate-spin" />}
