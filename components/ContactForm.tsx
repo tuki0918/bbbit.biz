@@ -1,8 +1,30 @@
 "use client";
 
+import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
+import { LoaderCircle } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+
+const formSchema = z.object({
+	name: z.string().min(1, "名前は必須です"),
+	email: z.string().email("正しいメールアドレスを入力してください"),
+	message: z.string().min(1, "メッセージは必須です"),
+});
 
 export default function Contact() {
+	const {
+		register,
+		handleSubmit,
+		formState: { errors, isSubmitting },
+	} = useForm<z.infer<typeof formSchema>>({
+		resolver: zodResolver(formSchema),
+	});
+
+	const onSubmit = async (data: z.infer<typeof formSchema>) => {
+		//
+	};
+
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -22,18 +44,81 @@ export default function Contact() {
 						</p>
 					</section>
 
-					<iframe
-						className="mx-auto"
-						title="お問い合わせ"
-						src="https://docs.google.com/forms/d/e/1FAIpQLScBG5HiL4CFRe9LMaYC3Fvs3DKHcYAK-yXYEZLTZ9joRL8uNw/viewform?embedded=true"
-						width="640"
-						height="720"
-						frameBorder={0}
-						marginHeight={0}
-						marginWidth={0}
-					>
-						読み込んでいます…
-					</iframe>
+					<div className="mx-auto max-w-[480px] mt-8">
+						<form onSubmit={handleSubmit(onSubmit)}>
+							<div className="mb-4">
+								<label
+									htmlFor="name"
+									className="block text-sm font-medium text-gray-700"
+								>
+									お名前
+								</label>
+								<input
+									type="text"
+									id="name"
+									{...register("name")}
+									className="mt-2 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+									placeholder="山田太郎"
+								/>
+								{errors.name && (
+									<p className="mt-1 sm:text-sm text-red-500">
+										{errors.name.message}
+									</p>
+								)}
+							</div>
+
+							<div className="mb-4">
+								<label
+									htmlFor="email"
+									className="block text-sm font-medium text-gray-700"
+								>
+									メールアドレス
+								</label>
+								<input
+									type="email"
+									id="email"
+									{...register("email")}
+									className="mt-2 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+									placeholder="test@example.com"
+								/>
+								{errors.email && (
+									<p className="mt-1 sm:text-sm text-red-500">
+										{errors.email.message}
+									</p>
+								)}
+							</div>
+
+							<div className="mb-8">
+								<label
+									htmlFor="email"
+									className="block text-sm font-medium text-gray-700"
+								>
+									お問い合わせ内容
+								</label>
+								<textarea
+									id="message"
+									{...register("message")}
+									className="min-h-[240px] mt-2 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+									placeholder=""
+								/>
+								{errors.message && (
+									<p className="mt-1 sm:text-sm text-red-500">
+										{errors.message.message}
+									</p>
+								)}
+							</div>
+
+							<div className="mb-4 mt-8">
+								<button
+									type="button"
+									className="relative w-[280px] mx-auto md:ml-auto p-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full font-bold flex justify-between items-center shadow-lg hover:shadow-xl transition-shadow duration-300"
+								>
+									{isSubmitting && <LoaderCircle className="animate-spin" />}
+									<span className="flex-1 text-center pl-4">送信</span>
+								</button>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</motion.div>
